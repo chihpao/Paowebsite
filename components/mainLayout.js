@@ -1,18 +1,17 @@
-// components/MainLayout.js
-import { useRouter } from 'next/router';
-import { useState, useEffect } from 'react';
+import React from 'react';
 
-export default function MainLayout({ children }) {
-  const router = useRouter();
-  const [loading, setLoading] = useState(false);
-
-  useEffect(() => {
-    // 你的 effect 處理邏輯
-  }, []);
-
+const MainLayout = ({ children }) => {
   return (
     <div>
-      {children}
+      <header>
+        <h1>Header</h1>
+      </header>
+      <main>{children}</main>
+      <footer>
+        <p>Footer</p>
+      </footer>
     </div>
   );
-}
+};
+
+export default MainLayout;

@@ -1,8 +1,12 @@
-'use client';
-import '../styles/globals.css';
+import React from 'react';
+import MainLayout from '../components/MainLayout';
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />;
-}
+const AppPage = () => {
+  return (
+    <MainLayout>
+      <h1>App Page</h1>
+    </MainLayout>
+  );
+};
 
-export default MyApp;
+export default AppPage;
